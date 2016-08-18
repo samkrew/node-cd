@@ -15,12 +15,12 @@ Bitbucket.prototype.post = function (req, res) {
   var bitbucketIps = config.security.bitbucketIps
   var ipv4 = req.ip.replace('::ffff:', '')
 
-  if (!(authorizedIps.indexOf(ipv4) >= 0 || bitbucketIps.indexOf(ipv4) >= 0)) {
-    console.log('Unauthorized IP:', req.ip)
-    res.writeHead(403)
-    res.end()
-    return
-  }
+  // if (!(authorizedIps.indexOf(ipv4) >= 0 || bitbucketIps.indexOf(ipv4) >= 0)) {
+  //   console.log('Unauthorized IP:', req.ip)
+  //   res.writeHead(403)
+  //   res.end()
+  //   return
+  // }
 
   if (!req.body.push) {
     res.writeHead(204)
