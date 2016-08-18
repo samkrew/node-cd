@@ -22,6 +22,6 @@ app.post('/github', githubController.create(config).post)
 app.post('/bitbucket', bitbucketController.create(config).post)
 app.post('/contentful', contentfulController.create(config).post)
 
-http.createServer(app).listen(app.get('port'), '0.0.0.0' function () {
+http.createServer(app).listen(app.get('port'), '0.0.0.0', function () {
   console.log('Node-cd server listening on port ' + app.get('port'))
 })
